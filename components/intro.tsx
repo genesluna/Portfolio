@@ -1,14 +1,13 @@
 "use client";
 
-import Image from "next/image";
-import React from "react";
+import { FaGithubSquare, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare } from "react-icons/fa";
-import { useSectionInView } from "@/lib/hooks";
+import React from "react";
+
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -64,14 +63,13 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="flex items-center gap-2 py-3 text-white transition bg-gray-900 rounded-full outline-none group px-7 focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105"
+          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me{" "}
-          <BsArrowRight className="transition opacity-70 group-hover:translate-x-1" />
+          <FaEnvelope />
         </Link>
 
         <a
@@ -79,7 +77,7 @@ export default function Intro() {
           href="https://www.linkedin.com/in/genes-luna/"
           target="_blank"
         >
-          <BsLinkedin />
+          <FaLinkedin />
         </a>
 
         <a
