@@ -55,7 +55,7 @@ export default function Intro() {
       </motion.h1>
 
       <motion.div
-        className="flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
+        className="flex items-center justify-center gap-2 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -70,7 +70,7 @@ export default function Intro() {
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{" "}
+          Contact me{" "}
           <BsArrowRight className="transition opacity-70 group-hover:translate-x-1" />
         </Link>
 
